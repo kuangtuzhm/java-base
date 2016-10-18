@@ -17,6 +17,6 @@
     </plugins>
   </build>
   <modules>
-  	<module>java-base-xml</module>
+  <module>java-base-xml</module>
   </modules>
 </project>
