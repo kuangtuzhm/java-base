@@ -18,5 +18,6 @@
   </build>
   <modules>
   <module>java-base-xml</module>
+  <module>java-base-threadLocal</module>
   </modules>
 </project>
