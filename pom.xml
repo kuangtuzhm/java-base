@@ -21,5 +21,6 @@
   <module>java-base-xml</module>
   <module>java-base-threadLocal</module>
     <module>java-base-proxy</module>
+    <module>java-base-threadPool</module>
   </modules>
 </project>
