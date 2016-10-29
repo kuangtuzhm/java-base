@@ -1,6 +1,7 @@
 package org.java.base.nio.channel;
 
 import java.io.FileInputStream;
+import java.io.FileOutputStream;
 import java.nio.ByteBuffer;
 import java.nio.CharBuffer;
 import java.nio.channels.FileChannel;
@@ -12,7 +13,7 @@ import java.nio.charset.CharsetDecoder;
  * @author Administrator
  *
  */
-public class FileInputTest2 {
+public class FileCopyTest {
 
 	public static void main(String[] args) throws Exception{
 		
@@ -22,18 +23,14 @@ public class FileInputTest2 {
 		FileInputStream fin = new FileInputStream("f:\\stdout.log");
 		FileChannel fc = fin.getChannel();
 		
+		FileOutputStream fout = new FileOutputStream( "f:\\testnio_zh2.txt" );  
+        FileChannel fc2 = fout.getChannel();  
+		
 		ByteBuffer byteBuffer = ByteBuffer.allocate(1024);
-		CharBuffer charBuffer = CharBuffer.allocate(1024);  
 		int bytes = fc.read(byteBuffer);  
 		while(bytes!=-1){  
              byteBuffer.flip();  
-             decoder.decode(byteBuffer, charBuffer, false);  
-             charBuffer.flip();  
-             while(charBuffer.hasRemaining())
-             {
-            	 System.out.print(charBuffer.get());  
-             }
-             charBuffer.clear();  
+             fc2.write(byteBuffer);
              byteBuffer.clear();  
              bytes = fc.read(byteBuffer);  
          }  
