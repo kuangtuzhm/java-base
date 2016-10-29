@@ -2,13 +2,17 @@ package org.java.base.nio.channel;
 
 import java.io.BufferedReader;
 import java.io.FileInputStream;
-import java.io.FileReader;
 import java.nio.ByteBuffer;
 import java.nio.CharBuffer;
 import java.nio.channels.FileChannel;
 import java.nio.charset.Charset;
 import java.nio.charset.CharsetDecoder;
 
+/**
+ * 中文
+ * @author Administrator
+ *
+ */
 public class FileInputTest2 {
 
 	public static void main(String[] args) throws Exception{
