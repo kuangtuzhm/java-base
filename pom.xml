@@ -22,5 +22,6 @@
   <module>java-base-threadLocal</module>
     <module>java-base-proxy</module>
     <module>java-base-threadPool</module>
+    <module>java-base-nio</module>
   </modules>
 </project>
