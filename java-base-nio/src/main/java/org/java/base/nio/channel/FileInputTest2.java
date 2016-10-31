@@ -29,10 +29,11 @@ public class FileInputTest2 {
              byteBuffer.flip();  
              decoder.decode(byteBuffer, charBuffer, false);  
              charBuffer.flip();  
-             while(charBuffer.hasRemaining())
-             {
-            	 System.out.print(charBuffer.get());  
-             }
+//             while(charBuffer.hasRemaining())
+//             {
+//            	 System.out.print(charBuffer.get());  
+//             }
+             System.out.print(charBuffer.toString());  
              charBuffer.clear();  
              byteBuffer.clear();  
              bytes = fc.read(byteBuffer);  

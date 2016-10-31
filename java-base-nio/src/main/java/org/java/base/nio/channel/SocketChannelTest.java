@@ -13,7 +13,7 @@ public class SocketChannelTest {
     public void readHTMLContent() {  
         try {  
             InetSocketAddress socketAddress = new InetSocketAddress(  
-"www.qq.com", 80);  
+"www.baidu.com", 80);  
 //step1:打开连接  
             channel = SocketChannel.open(socketAddress);  
         //step2:发送请求，使用GBK编码  
